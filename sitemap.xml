@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- TODO: Adresse durch die echte GitHub-Pages-Adresse bzw. Domain ersetzen -->
+  <url>
+    <loc>https://DEIN-NAME.github.io/REPO/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

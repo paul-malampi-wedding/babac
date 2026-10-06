@@ -1,0 +1,143 @@
+/* ===== BABAC KFZ – style.css (Mobile-First) ===== */
+:root{
+  --black:#141414;
+  --grey:#232323;
+  --grey-2:#2e2e2e;
+  --light:#f3f3f3;
+  --white:#fff;
+  --red:#d6141e;
+  --red-dark:#a80e16;
+  --wa:#25d366;
+  --radius:10px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-head:"Bahnschrift","DIN Alternate","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--font);color:var(--black);background:var(--white);line-height:1.6;padding-bottom:72px;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--red)}
+ul{list-style:none}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:var(--font-head);line-height:1.15}
+h2{font-size:1.9rem;margin-bottom:6px;border-left:6px solid var(--red);padding-left:12px}
+.sub{color:#555;margin:0 0 24px 18px;max-width:60ch}
+.center{text-align:center;margin-top:24px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:var(--radius);font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;transition:background .2s,transform .1s}
+.btn:active{transform:scale(.98)}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:var(--red-dark)}
+.btn-wa{background:var(--wa);color:#0b2d17}
+.btn-wa:hover{background:#1fb858}
+.btn-sm{min-height:40px;padding:0 14px;font-size:.9rem}
+.btn-row{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:var(--black);border-bottom:3px solid var(--red)}
+.header-in{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:10px}
+.brand{font-family:var(--font-head);font-weight:800;font-size:1.6rem;letter-spacing:.04em;color:var(--white);text-decoration:none}
+.brand span{color:var(--red)}
+.header-cta{display:flex;gap:8px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--black) 0%,var(--grey) 70%,#3a1013 100%);color:var(--white);padding:44px 0 40px}
+/* WERKSTATTFOTO als Hintergrund aktivieren (Bild in Ordner img/ legen):
+.hero{background:linear-gradient(rgba(20,20,20,.82),rgba(20,20,20,.82)),url("img/hero.jpg") center/cover no-repeat} */
+.values{font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:10px;font-size:.95rem}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:14px;max-width:16ch}
+.lead{max-width:60ch;color:#e4e4e4;margin-bottom:26px}
+.cta-box{background:rgba(255,255,255,.07);border-left:6px solid var(--red);border-radius:var(--radius);padding:18px}
+.cta-box p{font-size:1.1rem}
+
+/* USP */
+.usp{background:var(--red);color:var(--white)}
+.usp-list{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;padding-top:16px;padding-bottom:16px;font-weight:600;font-size:.92rem}
+.usp-list li::before{content:"✓ ";font-weight:800}
+
+/* Sections */
+.section{padding:52px 0}
+.dark{background:var(--grey);padding:30px 0}
+
+/* Leistungen */
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+.grid li{display:flex;gap:14px;align-items:center;background:var(--light);border-radius:var(--radius);padding:14px;border-bottom:3px solid transparent}
+.grid li:hover{border-bottom-color:var(--red)}
+.ico{flex:0 0 52px;height:52px;display:grid;place-items:center;background:var(--black);border-radius:var(--radius);font-size:1.6rem}
+.grid h3{font-size:1.1rem}
+.grid p{font-size:.9rem;color:#555}
+
+/* Galerie */
+.gallery{display:grid;grid-template-columns:1fr;gap:12px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;border:2px dashed #666;border-radius:var(--radius);color:#aaa;text-align:center;padding:10px}
+
+/* Buchung */
+.booking{background:var(--black);color:var(--white)}
+.booking .sub{color:#ccc}
+.booking-box{background:var(--white);border:3px solid var(--red);min-height:420px}
+
+/* Embeds (Calendly, Maps) */
+.embed{border-radius:var(--radius);overflow:hidden;display:grid;place-items:center}
+.embed iframe{width:100%;height:100%;min-height:420px;border:0}
+.ph-text{color:#777;padding:20px;text-align:center}
+.map-box{background:var(--light);min-height:300px;border:2px dashed #bbb}
+
+/* Kontakt */
+.contact{display:grid;gap:28px}
+address{font-style:normal;margin:14px 0}
+.contact p{margin-bottom:6px}
+
+/* Footer */
+.footer{background:var(--black);color:#ccc;padding:30px 0;text-align:center}
+.footer p{margin-bottom:8px}
+.footer a{color:var(--white)}
+.small{font-size:.85rem;opacity:.8}
+
+/* Impressum / Datenschutz (per :target) */
+.legal{display:none;position:fixed;inset:0;z-index:100;overflow-y:auto;background:var(--white);padding:24px 0 60px}
+.legal:target{display:block}
+.legal h3{margin:18px 0 4px;font-size:1.15rem}
+.legal p{margin-bottom:10px;max-width:70ch}
+.close{display:inline-block;margin-bottom:16px;font-weight:700}
+
+/* Mobile Schnellleiste */
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--black);border-top:3px solid var(--red)}
+
+/* Tablet & Desktop */
+@media (min-width:700px){
+  .btn-row{flex-direction:row}
+  .grid,.gallery{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .usp-list{grid-template-columns:repeat(3,1fr)}
+  .hero h1{font-size:3.4rem}
+  .contact{grid-template-columns:1fr 1.3fr}
+}
+@media (min-width:1000px){
+  body{padding-bottom:0}
+  .sticky-bar{display:none}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .usp-list{grid-template-columns:repeat(6,1fr);font-size:.85rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+
+/* ===== Öffnungszeiten ===== */
+.hours-title{margin-top:22px;font-size:1.2rem}
+.hours{border-collapse:collapse;width:100%;max-width:380px;margin:8px 0 6px}
+.hours th,.hours td{text-align:left;padding:8px 0;border-bottom:1px solid #ddd;font-size:.95rem}
+.hours th{font-weight:600;padding-right:14px}
+
+/* ===== Kundenstimmen ===== */
+.light{background:var(--light)}
+.quotes{display:grid;grid-template-columns:1fr;gap:14px}
+.quotes figure{background:var(--white);border-radius:var(--radius);border-left:6px solid var(--red);padding:18px}
+.quotes blockquote{font-size:1rem;margin-bottom:10px}
+.quotes figcaption{font-size:.85rem;color:#666;font-weight:600}
+@media (min-width:700px){
+  .quotes{grid-template-columns:repeat(3,1fr)}
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: Adresse durch die echte GitHub-Pages-Adresse bzw. Domain ersetzen
+Sitemap: https://DEIN-NAME.github.io/REPO/sitemap.xml
